@@ -1,0 +1,86 @@
+.navbar-nav.accordion{
+    transition: 50ms all linear;
+    // &.toggled{
+    //     transition: 200ms all linear;
+    // }
+}
+body{
+    &::-webkit-scrollbar{
+        width: .5em;
+    }
+    &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    &::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: .25em;
+    }
+}
+trix-toolbar [data-trix-button-group="file-tools"]{
+    display: none !important;
+}
+
+.form-group{
+    .group-profil{
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        .profil-preview{
+            // position: absolute;
+            width: 100%;
+            // top: 0;
+            // left: 0;
+
+        }
+        .image-profil{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            cursor: pointer;
+            &::-webkit-file-upload-button{
+                visibility: hidden;
+            }
+            &::before{
+                content: '\f030';
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 4;
+                background-color: rgba(51, 51, 51, 0.205);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-family: 'fontAwesome';
+                color: rgba(255, 255, 255, .5);
+                transition: 500s all inherit;
+                // display: inline-block;
+                // background: transparent;
+                // border-radius: 3px;
+                // padding: 5px 8px;
+                // outline: none;
+                // white-space: nowrap;
+                // -webkit-user-select: none;
+                // cursor: pointer;
+                // text-shadow: 1px 1px #fff;
+                // font-weight: 700;
+                // font-size: 10pt;
+                // height: 120px;
+                // width: 120px;
+                // line-height: 120px;
+                // text-align: center;
+            }
+            &:hover::before{
+                background-color: rgba(51, 51, 51, 0.466);
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+    }
+}

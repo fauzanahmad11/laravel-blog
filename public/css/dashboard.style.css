@@ -1,0 +1,78 @@
+.navbar-nav.accordion {
+  -webkit-transition: 50ms all linear;
+  transition: 50ms all linear;
+}
+
+body::-webkit-scrollbar {
+  width: .5em;
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: .25em;
+}
+
+trix-toolbar [data-trix-button-group="file-tools"] {
+  display: none !important;
+}
+
+.form-group .group-profil {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.form-group .group-profil .profil-preview {
+  width: 100%;
+}
+
+.form-group .group-profil .image-profil {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.form-group .group-profil .image-profil::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.form-group .group-profil .image-profil::before {
+  content: '\f030';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  background-color: rgba(51, 51, 51, 0.205);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'fontAwesome';
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 500s all inherit;
+  transition: 500s all inherit;
+}
+
+.form-group .group-profil .image-profil:hover::before {
+  background-color: rgba(51, 51, 51, 0.466);
+  color: white;
+}
+/*# sourceMappingURL=dashboard.style.css.map */
